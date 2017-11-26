@@ -1,6 +1,6 @@
 # Snippets for CMS Made Simple HTML (Smarty) Templates
 
-<img src="https://media.giphy.com/media/3osBLApyhtxmeYhgdy/giphy.gif" />
+<img src="https://github.com/JiiB/cms-made-simple-code-sinppets/blob/master/images/cmsmsextension_demo.gif?raw=true" />
 
 ## Known Issues
 
