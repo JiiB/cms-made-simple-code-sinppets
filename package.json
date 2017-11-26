@@ -1,0 +1,24 @@
+{
+    "name": "cms-made-simple-code-sinppets",
+    "displayName": "CMS Made Simple Code Sinppets",
+    "description": "Simple but useful code snippets for CMS Made Simple",
+    "version": "0.0.3",
+    "publisher": "jiib",
+    "engines": {
+        "vscode": "^1.18.0"
+    },
+    "categories": [
+        "Snippets"
+    ],
+    "icon": "images/logo.png",
+    "contributes": {
+        "snippets": [{
+            "language": "html",
+            "path": "./snippets/snippets.json"
+        }]
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/JiiB/cms-made-simple-code-sinppets.git"
+    }
+}

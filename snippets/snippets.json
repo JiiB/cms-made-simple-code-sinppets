@@ -1,0 +1,119 @@
+{
+    "content block": {
+        "prefix": "cb",
+        "body": [
+            "{content block='$1' label='$2' wysiwyg='$3' oneline='$4' tab='$5'}",
+            "$5"
+        ],
+        "description": "Create a content block in your html template"
+    },
+    "content image": {
+        "prefix": "ci",
+        "body": "{content_image block='$1' label='$2' dir='images/$3' urlonly='$4' tab='$5'}",
+        "description": "Create a content_image block"
+    },
+    "current year": {
+        "prefix": "year",
+        "body": "{current_date format='%Y'}",
+        "description": "output the current year"
+    },
+    "literal tag": {
+        "prefix": "literal",
+        "body": [
+            "{literal}",
+            "$1",
+            "{/literal}"
+        ],
+        "description": "create {literal} Tags"
+    },
+    "literal tag with script-tag": {
+        "prefix": "literaljs",
+        "body": [
+            "<script>",
+            "{literal}",
+            "$1",
+            "{/literal}",
+            "</script>"
+        ],
+        "description": "create {literal} Tags wrapped in script tags"
+    },
+    "breadcrumbs": {
+        "prefix": "breadcrumbs",
+        "body": "{nav_breadcrumbs}",
+        "description": "create {nav_breadcrumbs} tag"
+    },
+    "include": {
+        "prefix": "include",
+        "body": "{include file='cms_template:$1'}",
+        "description": "create {include} tag for global content blocks"
+    },
+    "if statement": {
+        "prefix": "ifelse",
+        "body": [
+            "{strip}{if $1}",
+            "$2",
+            "{else}",
+            "$3",
+            "{/if}{/strip}"
+        ],
+        "description": "create if-else statement with strip tags"
+    },
+    "foreach": {
+        "prefix": "foreach",
+        "body": [
+            "{foreach from=$$1 item=$2 key=key}",
+            "{$$2}",
+            "{/foreach}"
+        ],
+        "description": "create a {foreach} loop"
+    },
+    "mailto": {
+        "prefix": "mailto",
+        "body": "{mailto encode='javascript' address='$1'}",
+        "description": "create js encrypted mailto tag"
+    },
+    "basic HTML Template": {
+        "prefix": "cmshtml",
+        "body": [
+            "{strip} {process_pagedata} {/strip}",
+            "<!doctype html>",
+            "<html lang='de'>",
+            "<head>",
+            "\t{strip}{metadata}{/strip} {strip} {content block='seo_title' label='SEO Titel' assign='seo_title' wysiwyg='false' oneline='true' tab='SEO' maxlength='50'}",
+            "{content block='seo_description' assign='seo_description' label='SEO Description' wysiwyg='false' oneline='true' size='159' tab='SEO' maxlength='159'} {/strip}",
+            "\t<title>{strip}{sitename}{/strip} | {strip}{if empty(\\$seo_title)}{title}{else}{\\$seo_title}{/if}{/strip}</title>",
+            "\t{if !empty(\\$seo_description)}",
+            "\t<meta name='description' content='{strip}{\\$seo_description}{/strip}' />{/if} {strip}{cms_stylesheet}{/strip}",
+            "</head>",
+            "<body>",
+            "\t<!-- ========HEADER======== -->",
+            "\t<header>",
+            "\t\t<div class='container'>",
+            "\t\t\t<div id='logo'></div>",
+            "\t\t\t<nav>",
+            "\t\t\t\t{Navigator}",
+            "\t\t\t</nav>",
+            "\t\t</div>",
+            "\t</header>",
+            "\t<div id='header-holder'></div>",
+            "\t<!-- ========SLIDER======== -->",
+            "\t<section id='slider'>",
+            "\t</section>",
+            "\t<!-- ========MAIN CONTENT ======== -->",
+            "\t<main>",
+            "\t\t<section class='container'>",
+            "\t\t\t<h1>{title}</h1>",
+            "\t\t\t{content label='$1'}",
+            "\t\t</section>",
+            "\t</main>",
+            "\t<!-- ========FOOTER======== -->",
+            "\t<footer>",
+            "\t</footer>",
+            "\t<!-- ========SCRIPTS======== -->",
+            "\t{include file='cms_template:scripts'}",
+            "</body>",
+            "</html>"
+        ],
+        "description": "create boilerplate HTML Template"
+    }
+}
