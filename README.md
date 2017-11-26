@@ -30,7 +30,7 @@ ifelse | smarty if else statement
 foreach | smarty foreach loop
 mailto | creates a ```{mailto}``` tag which encrypts an email addresss with javascript
 cmshtml | html boilerplate file with useful tags that can be used for any CMS Made Simple website
-
+assign | create a ```{assign}``` tag
 
 
 Link to official CMS Made Simple [Website](https://www.cmsmadesimple.org/)

@@ -1,10 +1,7 @@
 {
     "content block": {
         "prefix": "cb",
-        "body": [
-            "{content block='$1' label='$2' wysiwyg='$3' oneline='$4' tab='$5'}",
-            "$5"
-        ],
+        "body": "{content block='$1' label='$2' wysiwyg='$3' oneline='$4' tab='$5'}",
         "description": "Create a content block in your html template"
     },
     "content image": {
@@ -71,6 +68,11 @@
         "prefix": "mailto",
         "body": "{mailto encode='javascript' address='$1'}",
         "description": "create js encrypted mailto tag"
+    },
+    "assign": {
+        "prefix": "assign",
+        "body": "{assign var='$1' value='$2'}",
+        "description": "create a {assign} tag"
     },
     "basic HTML Template": {
         "prefix": "cmshtml",
