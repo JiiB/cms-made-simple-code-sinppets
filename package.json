@@ -10,7 +10,7 @@
     "categories": [
         "Snippets"
     ],
-    "icon": "https://raw.githubusercontent.com/JiiB/cms-made-simple-code-sinppets/master/images/logo.png",
+    "icon": "images/logo.png",
     "contributes": {
         "snippets": [{
             "language": "html",
