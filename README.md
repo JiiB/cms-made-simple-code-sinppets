@@ -31,6 +31,7 @@ foreach | smarty foreach loop
 mailto | creates a ```{mailto}``` tag which encrypts an email addresss with javascript
 cmshtml | html boilerplate file with useful tags that can be used for any CMS Made Simple website
 assign | create a ```{assign}``` tag
+cms_selflink | creats a ```{cms_selflink}``` tag
 
 
 Link to official CMS Made Simple [Website](https://www.cmsmadesimple.org/)

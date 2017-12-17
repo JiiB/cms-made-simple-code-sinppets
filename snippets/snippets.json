@@ -69,6 +69,11 @@
         "body": "{mailto encode='javascript' address='$1'}",
         "description": "create js encrypted mailto tag"
     },
+    "cms_selflink": {
+        "prefix": "selflink",
+        "body": "{cms_selflink href='$1'}",
+        "description": "create a link to a page-alias"
+    },
     "assign": {
         "prefix": "assign",
         "body": "{assign var='$1' value='$2'}",
