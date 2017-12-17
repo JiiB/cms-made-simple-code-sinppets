@@ -13,7 +13,7 @@ To handle .tpl files in the same way as .html files, you should adjust the user 
 
 ## Release Notes
 
-### 0.0.5
+### 0.0.7
 
 Added the following snippets:
 
